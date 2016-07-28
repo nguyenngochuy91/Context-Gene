@@ -5,12 +5,11 @@ Created on Wed Jul 27 16:14:25 2016
 @purpose: parsing operon file to get the name, convert from ncbi name into normal
 gene name and format into a file to blast against clade of genomes.
 """
-# from Bio import Entrez, SeqIO
+from Bio import SeqIO
 import os
 import argparse
 import time
 import uuid
-db = 'gene'
 ###############################################################################
 ## Helper function to parse arguments, check directoring, ...
 ###############################################################################
@@ -30,11 +29,15 @@ def get_arguments():
     args = parser.parse_args()
     return args
     
-# parsing Nafiz file to get the info
+'''@function: Parsing the operon file, return the operon name and the NCBI protein ID
+   @input   : Operon file
+   @output  : oepron name, and list of NCBI protein ID
+'''    
+    
 def parse(myfile):
     infile = open(myfile,'r')
     lines  = infile.readlines()
-    genes=''
+    genes=[]
     for line in lines:
         if line[0] == '>':
             modified= line.split('|')
@@ -43,10 +46,23 @@ def parse(myfile):
             operon = operon.split('_')[0]
             gene   = modified[1].split(':')[1]
             if gene !="no protein id":
-                genes+=gene+'\t'
-    mystring = operon+'\t'+genes+'\n'
-    return mystring
-    # return operon,genes
+                genes.append(gene)
+    return operon,genes
+'''@function: Parsing the reference gbk file, get all the CDS feature, then
+              create a dictionary for key as protein id and value as gene name
+   @input   : reference file
+   @output  : dictionary
+'''    
+def create_dic_proteinID_gene(referenceFile): 
+    record = SeqIO.read(referenceFile,"genbank")
+    dic={}
+    for feature in record.features:
+        if feature.type == 'CDS':
+            try:
+                dic[feature.qualifiers['protein_id'][0]] =  feature.qualifiers['gene'][0]
+            except:
+                gene = 'unknown'
+    return dic
 ###############################################################################
 ## Main function 
 ###############################################################################
@@ -56,19 +72,23 @@ def parse(myfile):
    @output  : a single file with gene_block_names_and_genes 
 ''' 
 if __name__ == "__main__":
-    start = time.time()
-    args = get_arguments()
+    start     = time.time()
+    args      = get_arguments()
     directory = args.InputDataDirectory
     outfile   = args.OutputDirectory
-    outfile=open('./'+outfile,'w')
-    res = traverseAll(args.InputDataDirectory)
+    outfile   = open('./'+outfile,'w')
+    myDic     = create_dic_proteinID_gene('reference.gbk')
+    res       = traverseAll(args.InputDataDirectory)
     for r in res:
         root,f = os.path.split(r)
         if "KO" not in f:
             continue
         else:
-            mystring = parse(r)
-            outfile.write(mystring)
+            operon,genes = parse(r)
+            for gene in genes:
+                operon += '\t'+ myDic[gene]
+            operon +='\n'
+            outfile.write(operon)
     outfile.close()
     print (time.time() - start)
         
