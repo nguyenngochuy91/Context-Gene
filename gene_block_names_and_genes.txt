@@ -1,0 +1,8 @@
+KO05432	yfeA	gltX	xapR	xapB	xapA	yfeR	ypeB	ligA	zipA	pdxK	cysM	cysA	cysW	cysU	cysP	ucpA	murR	yfeX	yfeY	yfeZ	ypeA	eutR	eutK	eutL	eutC	eutB	eutA	eutH
+KO06137	yjgR	idnR	idnT	idnO	idnD	ahr	insG	insI1	fecE	fecD	fecC	fecB	fecA	fecR	fecI	yjhU	yjhF	yjhG	yjhH	yjhI	sgcR	sgcE	sgcA	sgcQ	sgcC	sgcB	sgcX	yjhP	yjhQ	yjhX	nanS	nanM	nanC
+KO05287	azuC	yecH	yecA	pgsA	uvrC	uvrY	sdiA	yecC	yecS	dcyD	fliY	fliZ	fliA	fliC	yedD	fliE	dsrB	yedQ	yodC	yedI	vsr	dcm	yedJ	yedR
+KO06172	nrdF	proV	proW	proX	ygaZ	ygaH	mprA	emrA	emrB	srlA	srlE	srlB	srlD	srlM	srlR	srlQ	norV	norW	ascF	ascB	hypA	hypB	hypC	hypD	hypE
+KO05756	glgP	glgA	glgC	glgX	glgB	asd	gntU	gntK	gntR	yhhW	yhhX	ggt	ugpQ	ugpC	ugpE	ugpA	ugpB	livF	livG	livM	livH	livK	livJ	rpoH	ftsX	ftsE	ftsY	yhhM	tusA	yhhS
+KO06130	lsrA	lsrC	lsrD	lsrB	lsrF	lsrG	tam	yneJ	yneK	ydeA	marR	marA	marB	ydeE	yneM	ydeJ	ydfG	rspR	ydfZ
+KO05068	btuR	yciK	yciN	ribA	osmB	yciT	yciZ	gmr	rnb	yciW	fabI	ycjD	sapF	sapD	sapC	sapB	sapA	ymjA	puuP	puuA	pspF
+KO05342	yehC	yehD	yehE	mrp	yehS	yehT	yehU	yehW	yehX	yehY	osmF	bglX	pbpG	yohC	yohF	dusC	mglC	mglA	mglB	galS	yeiB	folE
