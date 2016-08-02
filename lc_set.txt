@@ -1,0 +1,69 @@
+#Organism: Y12234.1 (as-48A-D1) and AJ438950.1 (as-48E - H), Enterococcus faecalis subsp. liquefaciens plasmid submitted as separate sequences)
+#Reference: http://jb.asm.org/content/190/1/240.full, http://aem.asm.org/content/69/2/1229.full.pdf
+#GI: 2664256
+#locus_tag label name
+CAA72917.1 toxin	 as-48
+CAA72918.1 modifier as-48B
+CAA72919.1 transport as-48C
+CAA72920.1 transport as-48C1
+CAA72921.1 transport as-48D
+CAA72922.1 immunity as-48D1
+CAD27714.1 transport as-48E
+CAD27715.1 transport as-48F
+CAD27716.1 transport as-48G
+CAD27717.1 transport as-48H
+#Organism: GG688628.1, Enterococcus faecalis D6
+#Reference: http://onlinelibrary.wiley.com/doi/10.1046/j.1462-5822.2003.00310.x/full
+#GI: 239976949
+#locus_tag label name
+EEU81215.1 immunity CylI
+EEU81214.1 modifier clyA
+# EEU81213.1 transport cytolysin B transporter
+EEU81212.1 modifier CylM
+EEU81211.1 toxin clyLs 
+# EEU81210.1 toxin
+EEU81209.1 regulator CylR1
+# EEU81208.1 regulator conserved hypothetical protein
+#Organism: AF061787.1, Escherichia coli plasmid pTUC100
+#Reference: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC93700
+#GI: 4731431
+#locus_tag label name
+AAD28494.1 toxin mcjA
+AAD28495.1 modifier mcjB
+AAD28496.1 modifier McjC
+AAD28497.1 transport McjD
+#Organism: NC_017486.1 Lactococcus lactis subsp. Lactis CV56
+#Reference: http://link.springer.com/article/10.1007%2Fs00018-007-7171-2
+#GI: 385829589
+#locus_tag label name
+ADZ63249.1 toxin nisA
+ADZ63250.1 modifier nisB
+ADZ63251.1 transport nisT
+ADZ63252.1 modifier nisC
+ADZ63253.1 immunity nisI
+ADZ63254.1 modifier nisP
+ADZ63255.1 regulator nisR
+ADZ63256.1 regulator nisK
+ADZ63257.1 immunity nisF
+ADZ63258.1 immunity nisF
+ADZ63259.1 immunity nisG
+#Organism: NC_004722.1 Bacillus cereus ATCC 14579
+#Reference: http://www.pnas.org/content/106/8/2549.full
+#GI: 30018278 : Question?  Why are there genes in between?
+#locus_tag label name
+AAP11940.1 transport tclX
+AAP11941.1 transport tclW
+AAP11944.1 immunity tclT
+AAP11945.1 modifier tclS
+AAP11947.1 immunity tclQ
+AAP11948.1 modifier tclP
+AAP11949.1 modifier tclO
+AAP11950.1 modifier tclN
+AAP11952.1 modifier tclL
+AAP11953.1 modifier tclK
+AAP11954.1 modifier tclJ
+AAP11956.1 toxin tclH
+AAP11957.1 toxin tclG
+AAP11958.1 toxin tclF
+AAP11959.1 toxin tclE
+AAP11960.1 modifier tclD
